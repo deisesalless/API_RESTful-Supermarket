@@ -51,7 +51,7 @@ public class ProductController {
          }
 
          product.get().add(linkTo(methodOn(ProductController.class).listAll()).withSelfRel());
-         return ResponseEntity.status(HttpStatus.OK).body(product.get());
+         return ResponseEntity.status(HttpStatus.FOUND).body(product.get());
     }
 
     @PutMapping("product/{id}")
